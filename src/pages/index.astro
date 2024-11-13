@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Page.astro'
+import Container from '../components/Container.astro';
+import { settings } from '@/data/settings';
+import Logo from '@/components/Logo.astro';
+
+const seo = {
+  title: settings.title,
+  description: settings.description,
+}
+---
+
+<style>
+  .hero__article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    text-align: center;
+  }
+</style>
+
+<Layout seo={seo}>
+  <Container narrow>
+    <article class="hero__article">
+      <Logo />
+      <h1 class="fade-in">Coming Soon</h1>
+      <p class="fade-in">A Hertitage of Purity | A Future of Wellness</p>
+    </article>
+  </Container>
+</Layout>
+
